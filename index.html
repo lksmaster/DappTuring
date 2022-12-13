@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Importing css styles -->
+  <link rel="stylesheet" href="./index.css" />
+  <title>Dapp VoteTuring</title>
+</head>
+
+<body>
+
+  <section class="votacao">
+    <section class="section-header">
+      <h1>Votação</h1>
+    </section>
+    <!-- Form -->
+    <form>
+      <label for="codi-name">Codinome</label>
+      <select name="pessoas" id="codi-name">
+        <option value="Andre">Andre</option>
+        <option value="Antonio">Antonio</option>
+        <option value="Ratonilo">Ratonilo</option>
+        <option value="eduardo">eduardo</option>
+        <option value="Enzo">Enzo</option>
+        <option value="Fernando">Fernando</option>
+        <option value="Juliana">Juliana</option>
+        <option value="Altoe">Altoe</option>
+        <option value="Salgado">Salgado</option>
+        <option value="Regata">Regata</option>
+        <option value="Luis">Luis</option>
+        <option value="Nicolas">Nicolas</option>
+        <option value="Rauta">Rauta</option>
+        <option value="Silva">Silva</option>
+        <option value="Sophie">Sophie</option>
+        <option value="Thiago">Thiago</option>
+        <option value="Brito">Brito</option>
+        <option value="ulopesu">ulopesu</option>
+        <option value="Vinicius">Vinicius</option>
+        <option value="Bonella">Bonella</option>
+      </select>
+      <label for="qtd-turings">Turings(TUR)</label>
+      <input type="number" step="0.01" id="qtd-turings">
+      <input type="button" value="Votar" id="votar" />
+    </form>
+    <input type="button" value="Doar Turings" id="ir-doar" />
+    <input type="button" value="Acabar votação" id="ir-acabar" />
+    <input type="button" value="Tabela de votos" id="ir-tabela" />
+    <!-- observacao -->
+    <section class="observacao">
+      <h1>OBS: Funções da professora estão ocultas.</h1>
+</section>
+  </section>
+
+  <!-- seção de doar token -->
+  <section class="doacao-de-tokens">
+    <section class="section-header">
+      <h1>Dar Turings</h1>
+    </section>
+    <section class="doacao">
+      <form>
+        <h3 class="codinome-detail-heading">
+          <label for="codinome">Codinome</label>
+          <select name="pessoas" id="codi-name-doacao">
+            <option value="Andre">Andre</option>
+            <option value="Antonio">Antonio</option>
+            <option value="Ratonilo">Ratonilo</option>
+            <option value="eduardo">eduardo</option>
+            <option value="Enzo">Enzo</option>
+            <option value="Fernando">Fernando</option>
+            <option value="Juliana">Juliana</option>
+            <option value="Altoe">Altoe</option>
+            <option value="Salgado">Salgado</option>
+            <option value="Regata">Regata</option>
+            <option value="Luis">Luis</option>
+            <option value="Nicolas">Nicolas</option>
+            <option value="Rauta">Rauta</option>
+            <option value="Silva">Silva</option>
+            <option value="Sophie">Sophie</option>
+            <option value="Thiago">Thiago</option>
+            <option value="Brito">Brito</option>
+            <option value="ulopesu">ulopesu</option>
+            <option value="Vinicius">Vinicius</option>
+            <option value="Bonella">Bonella</option>
+          </select>
+        </h3>
+          <label for="doacao-turings">Turings(TUR)</label>
+          <input type="number" step="0.01" id="doacao-turings">
+      </form>
+    </section>
+    <section class="section-footer">
+      <input type="button" value="Doar" id="doar" />
+      <button class="back-btn">Voltar</button>
+    </section>
+    
+  </section>
+  <!-- encerrar votacao -->
+  <section class="finalizar-section">
+    <section class="section-header">
+      <h1>Encerrar votação</h1>
+    </section>
+    <section class="section-footer">
+      <input type="button" value="Encerrar" id="acabar-votacao" />
+
+      <button class="back-btn-2">Voltar</button>
+    </section>
+  </section>
+
+  <!-- tabela -->
+  <section class="table-section">
+    <section class="section-header">
+      <h1>Tabela de Turings</h1>
+    </section>
+    <section class="section-footer">
+      <table>
+        <tr>
+          <th>Codinome</th>
+          <th>Turings</th>
+        </tr>
+        <tr>
+          <td>Andre</td>
+          <td id="detail-turings-0">0</td>
+        </tr>
+        <tr>
+          <td>Antonio</td>
+          <td id="detail-turings-1">0</td>
+        </tr>
+        <tr>
+          <td>Ratonilo</td>
+          <td id="detail-turings-2">0</td>
+        </tr>
+        <tr>
+          <td>eduardo</td>
+          <td id="detail-turings-3">0</td>
+        </tr>
+        <tr>
+          <td>Enzo</td>
+          <td id="detail-turings-4">0</td>
+        </tr>
+        <tr>
+          <td>Fernando</td>
+          <td id="detail-turings-5">0</td>
+        </tr>
+        <tr>
+          <td>Juliana</td>
+          <td id="detail-turings-6">0</td>
+        </tr>
+        <tr>
+          <td>Altoe</td>
+          <td id="detail-turings-7">0</td>
+        </tr>
+        <tr>
+          <td>Salgado</td>
+          <td id="detail-turings-8">0</td>
+        </tr>
+        <tr>
+          <td>Regata</td>
+          <td id="detail-turings-9">0</td>
+        </tr>
+        <tr>
+          <td>Luis</td>
+          <td id="detail-turings-10">0</td>
+        </tr>
+        <tr>
+          <td>Nicolas</td>
+          <td id="detail-turings-11">0</td>
+        </tr>
+        <tr>
+          <td>Rauta</td>
+          <td id="detail-turings-12">0</td>
+        </tr>
+        <tr>
+          <td>Silva</td>
+          <td id="detail-turings-13">0</td>
+        </tr>
+        <tr>
+          <td>Sophie</td>
+          <td id="detail-turings-14">0</td>
+        </tr>
+        <tr>
+          <td>Thiago</td>
+          <td id="detail-turings-15">0</td>
+        </tr>
+        <tr>
+          <td>Brito</td>
+          <td id="detail-turings-16">0</td>
+        </tr>
+        <tr>
+          <td>ulopesu</td>
+          <td id="detail-turings-17">0</td>
+        </tr>
+        <tr>
+          <td>Vinicius</td>
+          <td id="detail-turings-18">0</td>
+        </tr>
+        <tr>
+          <td>Bonella</td>
+          <td id="detail-turings-19">0</td>
+        </tr>
+      </table>
+    </section>
+    <button class="back-btn-3">Voltar</button>
+    <button class="refresh-btn">Recarregar</button>
+  </section>
+</body>
+<footer>
+  <!-- Importing Ethers.js script -->
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+
+  <!-- Importing javascript file -->
+  <script src="./index.js"></script>
+</footer>
+
+</html>
