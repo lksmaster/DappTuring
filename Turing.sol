@@ -3,7 +3,8 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
  
 contract Turing is ERC20 {
    //address owner = msg.sender;
-   address public professora = 0xA5095296F7fF9Bdb01c22e3E0aC974C8963378ad;
+   //address public professora = 0xA5095296F7fF9Bdb01c22e3E0aC974C8963378ad;
+   address public professora = 0x6701D0C23d51231E676698446E55F4936F5d99dF;
    bool[20][20] public jaVotou;
    bool votacaoFinalizada = false;
  
@@ -18,7 +19,9 @@ contract Turing is ERC20 {
            jaVotou[id[msg.sender]][id[endereco[nome]]] == false && // nao votou nesse nome ainda
                amount <= 2 * 10**18 && // limite de 2 turings
                msg.sender != endereco[nome] && // nao esta votando em si mesmo
-               votacaoFinalizada == false); // a votacao ainda esta aberta
+               votacaoFinalizada == false && // a votacao ainda esta aberta
+               msg.sender != professora); // a professora nao pode votar
+               // enderecos fora da lista conseguem pagar a transacao, porem ela é revertida.
        _;
    }
    mapping(string => address) private endereco;
@@ -87,7 +90,7 @@ contract Turing is ERC20 {
        return balanceOf(endereco[nome]);
    }
 
-   function profDonate(string memory nome, uint256 amount) public {
+   function profDonate(string memory nome, uint256 amount) public onlyProf{
        issueToken(endereco[nome], amount);
    }
 }
