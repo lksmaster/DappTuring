@@ -2,7 +2,7 @@
 let TuringContract;
 
 // 2. Configuração do endereço do contrato e ABI
-const Turing_Contract_Address = "0x0347d780AE193158e37D537f02F9AD25d2b7B48B";
+const Turing_Contract_Address = "0x5f89dA35DC01a50422FCa4fcA555731815df77e6";
 const Turing_Contract_ABI = [
 	{
 		"inputs": [],
@@ -130,7 +130,7 @@ const Turing_Contract_ABI = [
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "codename",
+				"name": "nome",
 				"type": "string"
 			}
 		],
@@ -140,25 +140,6 @@ const Turing_Contract_ABI = [
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"name": "codenameToAddress",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
 			}
 		],
 		"stateMutability": "view",
@@ -251,6 +232,30 @@ const Turing_Contract_ABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "jaVotou",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "name",
 		"outputs": [
@@ -258,6 +263,37 @@ const Turing_Contract_ABI = [
 				"internalType": "string",
 				"name": "",
 				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "nome",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "profDonate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "professora",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
 			}
 		],
 		"stateMutability": "view",
@@ -346,7 +382,7 @@ const Turing_Contract_ABI = [
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "codename",
+				"name": "nome",
 				"type": "string"
 			},
 			{
@@ -359,32 +395,8 @@ const Turing_Contract_ABI = [
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "voted",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
 	}
-];
+]
 
 codinames = ["Andre", "Antonio", "Ratonilo", "eduardo", "Enzo", "Fernando", "Juliana", "Altoe", "Salgado", "Regata", "Luis", "Nicolas", "Rauta", "Silva", "Sophie", "Thiago", "Brito", "ulopesu", "Vinicius", "Bonella"]
 
@@ -424,7 +436,7 @@ provider.send("eth_requestAccounts", []).then(() => {
     const signer = provider.getSigner(accounts[0]);
 	const signer_address = signer["_address"]
 	// CONFERIR PROF
-	if (signer_address == "0x6701D0C23d51231E676698446E55F4936F5d99dF")
+	if (signer_address == "0xA5095296F7fF9Bdb01c22e3E0aC974C8963378ad")
 	{
 		main_para_acabar.style.display = "block";
 		main_para_doar.style.display = "block";
