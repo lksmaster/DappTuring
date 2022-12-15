@@ -2,7 +2,7 @@
 let TuringContract;
 
 // 2. Configuração do endereço do contrato e ABI
-const Turing_Contract_Address = "0x977107239aAD3bE7c7516Ba361660662e194E12B";
+const Turing_Contract_Address = "0x0347d780AE193158e37D537f02F9AD25d2b7B48B";
 const Turing_Contract_ABI = [
 	{
 		"inputs": [],
@@ -424,7 +424,7 @@ provider.send("eth_requestAccounts", []).then(() => {
     const signer = provider.getSigner(accounts[0]);
 	const signer_address = signer["_address"]
 	// CONFERIR PROF
-	if (signer_address == "0xA5095296F7fF9Bdb01c22e3E0aC974C8963378ad")
+	if (signer_address == "0x6701D0C23d51231E676698446E55F4936F5d99dF")
 	{
 		main_para_acabar.style.display = "block";
 		main_para_doar.style.display = "block";
@@ -498,7 +498,7 @@ const botao_votar = () => {
       votarButton.value = "Votar";
 	  if (err.code == "UNPREDICTABLE_GAS_LIMIT")
 	  {
-		alert("Error details : Já votou, esta votando em si mesmo ou o valor ultrapassou o limite de 2 Turings.");
+		alert("Possíveis erros: Já votou nesse codinome || Esta votando em si mesmo || O valor ultrapassou o limite de 2 Turings || Seu endereço não esta na lista.");
 	  }
 	  else
       	alert("Error details :" + err.code);
